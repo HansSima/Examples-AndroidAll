@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewParent;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fullListOfExamples();
+        fullListOfProjects();
         changeExampleRecycleView();
         changeProjectRecycleView();
     }
@@ -35,6 +37,11 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         AllExamplesActivityArrayList.add("Get Internet Resource");
         AllExamplesActivityArrayList.add("Audio/Video");
         AllExamplesActivityArrayList.add("Call API");
+    }
+
+    private void fullListOfProjects(){
+        AllProjectActivityArrayList = new ArrayList<>();
+        AllProjectActivityArrayList.add("Brain Trainer app");
     }
 
     private void changeExampleRecycleView(){
@@ -49,10 +56,10 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
     private void changeProjectRecycleView(){
         myRecyclerView2 = findViewById(R.id.projectList);
         myRecyclerView2.setLayoutManager(new LinearLayoutManager(this));
-        adapter2 = new MyRecyclerViewAdapter(this, AllExamplesActivityArrayList);
+        adapter2 = new MyRecyclerViewAdapter(this, AllProjectActivityArrayList);
         adapter2.setClickListener(this);
         adapter2.setClickLongListener(this);
-        myRecyclerView2.setAdapter(adapter);
+        myRecyclerView2.setAdapter(adapter2);
     }
 
     private void changeActivity(int adapterPosition, boolean isExample){
