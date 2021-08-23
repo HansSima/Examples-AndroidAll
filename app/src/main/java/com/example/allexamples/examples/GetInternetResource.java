@@ -1,4 +1,4 @@
-package com.example.allexamples;
+package com.example.allexamples.examples;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.allexamples.R;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;

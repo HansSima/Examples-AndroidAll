@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -63,6 +65,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     String getItem(int id) {
         return mData.get(id);
     }
+
     // allows clicks events to be caught
     void setClickListener(ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;

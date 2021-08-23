@@ -8,28 +8,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/simpleExamples"
-        android:layout_width="359dp"
-        android:layout_height="276dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="411dp"
+        android:layout_height="667dp"
+        android:tag="Examples"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:tag="Examples"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/projectList"
-        android:layout_width="359dp"
-        android:layout_height="276dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simpleExamples"
-        app:layout_constraintVertical_bias="1.0"
-        android:tag="Project"
-        />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/examplesTextView"
@@ -40,16 +27,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/projectTextView"
-        android:layout_width="124dp"
-        android:layout_height="42dp"
-        android:text="Projects"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simpleExamples" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

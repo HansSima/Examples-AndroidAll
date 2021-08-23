@@ -8,7 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewParent;
+
+import com.example.allexamples.apps.BrainTrainerApp;
+import com.example.allexamples.examples.AudioAndVideo;
+import com.example.allexamples.examples.GetInternetResource;
+import com.example.allexamples.examples.JSONDemo;
 
 import java.util.ArrayList;
 
@@ -18,30 +22,20 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
     MyRecyclerViewAdapter adapter;
     ArrayList<String> AllExamplesActivityArrayList;
 
-    RecyclerView myRecyclerView2;
-    MyRecyclerViewAdapter adapter2;
-    ArrayList<String> AllProjectActivityArrayList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fullListOfExamples();
-        fullListOfProjects();
         changeExampleRecycleView();
-        changeProjectRecycleView();
     }
 
     private void fullListOfExamples(){
         AllExamplesActivityArrayList = new ArrayList<>();
         AllExamplesActivityArrayList.add("Get Internet Resource");
         AllExamplesActivityArrayList.add("Audio/Video");
-        AllExamplesActivityArrayList.add("Call API");
-    }
-
-    private void fullListOfProjects(){
-        AllProjectActivityArrayList = new ArrayList<>();
-        AllProjectActivityArrayList.add("Brain Trainer app");
+        AllExamplesActivityArrayList.add("JSON Demo");
+        AllExamplesActivityArrayList.add("Brain Trainer App");
     }
 
     private void changeExampleRecycleView(){
@@ -53,17 +47,9 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         myRecyclerView.setAdapter(adapter);
     }
 
-    private void changeProjectRecycleView(){
-        myRecyclerView2 = findViewById(R.id.projectList);
-        myRecyclerView2.setLayoutManager(new LinearLayoutManager(this));
-        adapter2 = new MyRecyclerViewAdapter(this, AllProjectActivityArrayList);
-        adapter2.setClickListener(this);
-        adapter2.setClickLongListener(this);
-        myRecyclerView2.setAdapter(adapter2);
-    }
-
-    private void changeActivity(int adapterPosition, boolean isExample){
+    private void changeActivity(int adapterPosition){
         Intent changeIntent;
+
         switch (adapterPosition){
             case 0:
                 changeIntent = new Intent(getApplicationContext(), GetInternetResource.class);
@@ -73,6 +59,14 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
                 changeIntent = new Intent(getApplicationContext(), AudioAndVideo.class);
                 startActivity(changeIntent);
                 break;
+            case 2:
+                changeIntent = new Intent(getApplicationContext(), JSONDemo.class);
+                startActivity(changeIntent);
+                break;
+            case 3:
+                changeIntent = new Intent(getApplicationContext(), BrainTrainerApp.class);
+                startActivity(changeIntent);
+                break;
             default:
                 break;
         }
@@ -80,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
     @Override
     public void onItemClick(View v, int adapterPosition) {
-        changeActivity(adapterPosition, true);
+        changeActivity(adapterPosition);
     }
 
     @Override

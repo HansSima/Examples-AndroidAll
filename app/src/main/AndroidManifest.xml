@@ -11,9 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllExamples">
-        <activity android:name=".BrainTrainerApp"></activity>
-        <activity android:name=".AudioAndVideo" />
-        <activity android:name=".GetInternetResource" />
+        <activity android:name=".examples.JSONDemo"></activity>
+        <activity android:name=".apps.BrainTrainerApp" />
+        <activity android:name=".examples.AudioAndVideo" />
+        <activity android:name=".examples.GetInternetResource" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.allexamples;
+package com.example.allexamples.examples;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.MediaController;
 import android.widget.SeekBar;
 import android.widget.VideoView;
+
+import com.example.allexamples.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
