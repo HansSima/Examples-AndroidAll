@@ -16,8 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.allexamples.ItemClickListener;
-import com.example.allexamples.MyRecyclerViewAdapter;
 import com.example.allexamples.R;
 
 import java.io.IOException;
@@ -26,7 +24,7 @@ import java.util.ArrayList;
 public class NotesActivity extends AppCompatActivity implements ItemClickListener {
 
     RecyclerView myRecyclerView;
-    com.example.allexamples.MyRecyclerViewAdapter adapter;
+    MyNotesRecyclerViewAdapter adapter;
     ArrayList<String> notesArrayList;
     ArrayList<String> shortNotesArrayList;
     SharedPreferences sharedPreferences;
@@ -118,8 +116,7 @@ public class NotesActivity extends AppCompatActivity implements ItemClickListene
     private void changeRecycleView(){
         myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         shorterArrayListNotes();
-        adapter = new MyAnotherRecyclerViewAdapter(this, shortNotesArrayList);
-
+        adapter = new MyNotesRecyclerViewAdapter(this, shortNotesArrayList);
         adapter.setClickListener(this);
         adapter.setClickLongListener(this);
         myRecyclerView.setAdapter(adapter);

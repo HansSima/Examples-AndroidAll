@@ -10,18 +10,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.allexamples.MyRecyclerViewAdapter;
+import com.example.allexamples.apps.memorableplaces.MyMemorableplaceRecyclerViewAdapter;
 import com.example.allexamples.examples.ObjectSerializer;
 import com.example.allexamples.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MemorablePlacesActivity extends AppCompatActivity implements com.example.allexamples.MyRecyclerViewAdapter.ItemClickListener {
+public class MemorablePlacesActivity extends AppCompatActivity implements MyMemorableplaceRecyclerViewAdapter.ItemClickListener {
 
     RecyclerView myPlaces;
     ArrayList<String> myPlacesList = new ArrayList<>();
-    com.example.allexamples.MyRecyclerViewAdapter adapter;
+    MyMemorableplaceRecyclerViewAdapter adapter;
     SharedPreferences sharedPreferences;
     ArrayList<String> listLatLng = new ArrayList<>();
 
@@ -46,7 +46,7 @@ public class MemorablePlacesActivity extends AppCompatActivity implements com.ex
             listLatLng.add("Zadej prvni pozici");
         }
 
-        adapter = new MyRecyclerViewAdapter(this, listLatLng);
+        adapter = new MyMemorableplaceRecyclerViewAdapter(this, listLatLng);
         adapter.setClickListener(this);
         myPlaces.setAdapter(adapter);
     }

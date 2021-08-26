@@ -30,6 +30,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import com.example.allexamples.R;
+
 public class AnotherMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -106,7 +108,7 @@ public class AnotherMapsActivity extends FragmentActivity implements OnMapReadyC
                     if(myAddressList != null && myAddressList.size() > 0){
                         Log.i("Data:", myAddressList.get(0).toString());
                         String vypis = myAddressList.get(0).getCountryName() + myAddressList.get(0).getAddressLine(0) + myAddressList.get(0).getCountryCode();
-                        Toast.makeText(MapsActivity.this, vypis, Toast.LENGTH_LONG).show();
+                        Toast.makeText(AnotherMapsActivity.this, vypis, Toast.LENGTH_LONG).show();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
