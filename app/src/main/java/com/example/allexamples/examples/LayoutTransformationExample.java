@@ -8,12 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.allexamples.R;
 
-public class LayoutTransformationActivity extends AppCompatActivity {
+public class LayoutTransformationExample extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_layout_transformation);
         ImageView obrazekBarta = findViewById(R.id.bartImg);
         obrazekBarta.setTranslationX(1000f);
     }

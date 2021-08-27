@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.allexamples.R;
 
-public class TicTacToeActivity extends AppCompatActivity {
+public class TicTacToeApp extends AppCompatActivity {
 
     private int player = 0;
     private int objectId;
@@ -21,7 +21,7 @@ public class TicTacToeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tic_tac_toe);
     }
 
     public void showToken(View view) {

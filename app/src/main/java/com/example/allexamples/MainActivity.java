@@ -9,10 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.allexamples.apps.BrainTrainerApp;
-import com.example.allexamples.examples.AudioAndVideo;
-import com.example.allexamples.examples.GetInternetResource;
-import com.example.allexamples.examples.JSONDemo;
+import com.example.allexamples.apps.EggTimerApp;
+import com.example.allexamples.apps.notes.NoteChangeActivity;
+import com.example.allexamples.examples.AudioAndVideoExample;
 
 import java.util.ArrayList;
 
@@ -32,10 +31,31 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
     private void fullListOfExamples(){
         AllExamplesActivityArrayList = new ArrayList<>();
-        AllExamplesActivityArrayList.add("Get Internet Resource");
-        AllExamplesActivityArrayList.add("Audio/Video");
-        AllExamplesActivityArrayList.add("JSON Demo");
+
+        //All Apps
         AllExamplesActivityArrayList.add("Brain Trainer App");
+        AllExamplesActivityArrayList.add("Egg Timer App");
+        AllExamplesActivityArrayList.add("Hiker Watch App");
+        AllExamplesActivityArrayList.add("Memorable Places App");
+        AllExamplesActivityArrayList.add("Notes App");
+        AllExamplesActivityArrayList.add("Tic Tac Toe App");
+        AllExamplesActivityArrayList.add("Time Table App");
+
+        //All examples
+        AllExamplesActivityArrayList.add("Alert Dialog Example");
+        AllExamplesActivityArrayList.add("Another Maps Example");
+        AllExamplesActivityArrayList.add("Audio And Video Example");
+        AllExamplesActivityArrayList.add("File Reader Example");
+        AllExamplesActivityArrayList.add("Get Internet Resource Example");
+        AllExamplesActivityArrayList.add("Grid Example");
+        AllExamplesActivityArrayList.add("JSON Example");
+        AllExamplesActivityArrayList.add("Layout Transformation Example");
+        AllExamplesActivityArrayList.add("Life Cycle Example");
+        AllExamplesActivityArrayList.add("Maps Example");
+        AllExamplesActivityArrayList.add("Shared Preferences Example");
+        AllExamplesActivityArrayList.add("Sqlite Example");
+        AllExamplesActivityArrayList.add("Timers Example");
+
     }
 
     private void changeExampleRecycleView(){
@@ -48,27 +68,21 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
     }
 
     private void changeActivity(int adapterPosition){
-        Intent changeIntent;
 
-        switch (adapterPosition){
-            case 0:
-                changeIntent = new Intent(getApplicationContext(), GetInternetResource.class);
-                startActivity(changeIntent);
-                break;
-            case 1:
-                changeIntent = new Intent(getApplicationContext(), AudioAndVideo.class);
-                startActivity(changeIntent);
-                break;
-            case 2:
-                changeIntent = new Intent(getApplicationContext(), JSONDemo.class);
-                startActivity(changeIntent);
-                break;
-            case 3:
-                changeIntent = new Intent(getApplicationContext(), BrainTrainerApp.class);
-                startActivity(changeIntent);
-                break;
-            default:
-                break;
+        String className = AllExamplesActivityArrayList.get(adapterPosition).replaceAll("\\s", "");
+        String path = "com.example.allexamples.examples.";
+
+        if(className.contains("App")){
+            path = "com.example.allexamples.apps.";
+        }
+
+        String classNameWithPath = path + className;
+        try {
+            Class classToChange = Class.forName(classNameWithPath);
+            Intent changeIntent = new Intent(getApplicationContext(), classToChange);
+            startActivity(changeIntent);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

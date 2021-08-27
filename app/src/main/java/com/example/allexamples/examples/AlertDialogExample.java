@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.allexamples.R;
 
-public class AlertDialogActivity extends AppCompatActivity {
+public class AlertDialogExample extends AppCompatActivity {
 
     TextView language;
     SharedPreferences sharedPreferences;
@@ -21,7 +21,7 @@ public class AlertDialogActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_alert_dialog);
         language = findViewById(R.id.language);
         sharedPreferences = this.getSharedPreferences("com.example.usingalertdialogs", Context.MODE_PRIVATE);
         actualLanguage = sharedPreferences.getString("language", "JAZYK");
@@ -34,7 +34,7 @@ public class AlertDialogActivity extends AppCompatActivity {
                 .setPositiveButton("English", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(AlertDialogActivity.this, "English", Toast.LENGTH_LONG).show();
+                        Toast.makeText(AlertDialogExample.this, "English", Toast.LENGTH_LONG).show();
                         sharedPreferences.edit().putString("language", "English").apply();
                         language.setText(actualLanguage = sharedPreferences.getString("language", "JAZYK"));
 
@@ -43,7 +43,7 @@ public class AlertDialogActivity extends AppCompatActivity {
                 .setNegativeButton("Czech", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(AlertDialogActivity.this, "Czech", Toast.LENGTH_LONG).show();
+                        Toast.makeText(AlertDialogExample.this, "Czech", Toast.LENGTH_LONG).show();
                         sharedPreferences.edit().putString("language", "Czech").apply();
                         language.setText(actualLanguage = sharedPreferences.getString("language", "JAZYK"));
                     }

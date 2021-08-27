@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="deleteNotes"
-    tools:context=".MainActivity">
+    tools:context=".apps.notes.NotesApp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myRecycleView"

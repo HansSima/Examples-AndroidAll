@@ -12,12 +12,12 @@ import com.example.allexamples.R;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class SharedPreferencesActivity extends AppCompatActivity {
+public class SharedPreferencesExample extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_shared_preferences);
 
         SharedPreferences sharedPreferences = this.getSharedPreferences("com.example.sharedpreferences", Context.MODE_PRIVATE);
 

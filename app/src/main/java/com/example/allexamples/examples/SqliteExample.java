@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.allexamples.R;
 
-public class SqliteActivity extends AppCompatActivity {
+public class SqliteExample extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -20,7 +20,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
-public class GetInternetResource extends AppCompatActivity {
+public class GetInternetResourceExample extends AppCompatActivity {
 
     ImageView downloadedImage;
 
@@ -105,7 +105,7 @@ public class GetInternetResource extends AppCompatActivity {
     public void showImage(View view){
 
         Bitmap vracenyObrazek = null;
-        GetInternetResource.DownloadImage newDownloadImageClass = new GetInternetResource.DownloadImage();
+        GetInternetResourceExample.DownloadImage newDownloadImageClass = new GetInternetResourceExample.DownloadImage();
         vracenyObrazek = null;
         try {
             vracenyObrazek = newDownloadImageClass.execute("https://www.playzone.cz/sites/default/files/styles/290x330_profile_image/public/profile-images/290310/Dickhead.jpg?itok=qCKzHgb6").get();

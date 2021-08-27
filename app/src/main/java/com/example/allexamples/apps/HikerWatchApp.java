@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class HikerWatchActivity extends AppCompatActivity {
+public class HikerWatchApp extends AppCompatActivity {
 
     private TextView textViewLat;
     private TextView textViewLon;
@@ -48,7 +48,7 @@ public class HikerWatchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_hiker_watch);
         textViewLat = findViewById(R.id.textViewLatitude);
         textViewLon = findViewById(R.id.textViewLongtitude);
         textViewAcc = findViewById(R.id.textViewAccuracy);

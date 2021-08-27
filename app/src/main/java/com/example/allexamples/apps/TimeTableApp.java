@@ -12,12 +12,12 @@ import com.example.allexamples.R;
 import java.util.ArrayList;
 
 
-public class TimeTableActivity extends AppCompatActivity {
+public class TimeTableApp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_time_table);
 
         ListView timeTableList = (ListView)findViewById(R.id.TimeTableList);
         SeekBar mySeekBar = (SeekBar)findViewById(R.id.mySeekBar);

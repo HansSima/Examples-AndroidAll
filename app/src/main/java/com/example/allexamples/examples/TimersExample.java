@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.allexamples.R;
 
-public class TimersActivity extends AppCompatActivity {
+public class TimersExample extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

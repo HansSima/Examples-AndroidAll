@@ -13,7 +13,7 @@ import com.example.allexamples.R;
 
 import java.util.concurrent.TimeUnit;
 
-public class EggTimer extends AppCompatActivity {
+public class EggTimerApp extends AppCompatActivity {
     /*
     SeekBar timerSeekBar;
     TextView timerTextView;
@@ -124,7 +124,7 @@ public class EggTimer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_egg_timer);
         myTimerSeekBar = (SeekBar) findViewById(R.id.seekBarTimer);
         myTimerSeekBar.setMax(10);
         myTimerSeekBar.setProgress(5);

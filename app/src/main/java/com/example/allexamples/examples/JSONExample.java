@@ -21,7 +21,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
-public class JSONDemo extends AppCompatActivity {
+public class JSONExample extends AppCompatActivity {
 
     private String apiKey = "5c3b8bfd2fbfedaec4f61b76a1e199af";
     public String weatherStatus = "";

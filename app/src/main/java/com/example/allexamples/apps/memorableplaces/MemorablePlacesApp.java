@@ -17,7 +17,7 @@ import com.example.allexamples.R;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MemorablePlacesActivity extends AppCompatActivity implements MyMemorableplaceRecyclerViewAdapter.ItemClickListener {
+public class MemorablePlacesApp extends AppCompatActivity implements MyMemorableplaceRecyclerViewAdapter.ItemClickListener {
 
     RecyclerView myPlaces;
     ArrayList<String> myPlacesList = new ArrayList<>();
@@ -28,7 +28,7 @@ public class MemorablePlacesActivity extends AppCompatActivity implements MyMemo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_memorable_places_main);
 
         sharedPreferences = this.getSharedPreferences("com.example.memorableplaces", Context.MODE_PRIVATE);
 

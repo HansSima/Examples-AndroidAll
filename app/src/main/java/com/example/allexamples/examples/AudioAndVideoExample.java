@@ -17,7 +17,7 @@ import com.example.allexamples.R;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class AudioAndVideo extends AppCompatActivity {
+public class AudioAndVideoExample extends AppCompatActivity {
 
     MediaPlayer mySound;
     AudioManager audioManager;

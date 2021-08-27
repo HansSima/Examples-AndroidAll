@@ -11,10 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllExamples">
-        <activity android:name=".examples.JSONDemo"></activity>
-        <activity android:name=".apps.BrainTrainerApp" />
-        <activity android:name=".examples.AudioAndVideo" />
-        <activity android:name=".examples.GetInternetResource" />
+
+        <activity android:name=".apps.BrainTrainerApp"></activity>
+        <activity android:name=".apps.EggTimerApp"></activity>
+        <activity android:name=".apps.HikerWatchApp"></activity>
+        <activity android:name=".apps.memorableplaces.MemorablePlacesApp"></activity>
+        <activity android:name=".apps.notes.NotesApp"></activity>
+        <activity android:name=".apps.TicTacToeApp"></activity>
+        <activity android:name=".apps.TimeTableApp"></activity>
+        <activity android:name=".examples.AlertDialogExample"></activity>
+        <activity android:name=".examples.AnotherMapsExample"></activity>
+        <activity android:name=".examples.AudioAndVideoExample"></activity>
+        <activity android:name=".examples.FileReaderExample"></activity>
+        <activity android:name=".examples.GetInternetResourceExample"></activity>
+        <activity android:name=".examples.GridExample"></activity>
+        <activity android:name=".examples.JSONExample"></activity>
+        <activity android:name=".examples.LayoutTransformationExample"></activity>
+        <activity android:name=".examples.LifeCycleExample"></activity>
+        <activity android:name=".examples.MapsExample"></activity>
+        <activity android:name=".examples.SharedPreferencesExample"></activity>
+        <activity android:name=".examples.SqliteExample"></activity>
+        <activity android:name=".examples.TimersExample"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +39,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />

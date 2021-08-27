@@ -21,7 +21,7 @@ import com.example.allexamples.R;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class NotesActivity extends AppCompatActivity implements ItemClickListener {
+public class NotesApp extends AppCompatActivity implements ItemClickListener {
 
     RecyclerView myRecyclerView;
     MyNotesRecyclerViewAdapter adapter;

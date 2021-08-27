@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".apps.TicTacToeApp">
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayer"
@@ -125,7 +125,7 @@
             android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/winner_message" />
+            android:text="Win" />
 
         <Button
             android:id="@+id/playAgain"
@@ -133,6 +133,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:onClick="playAgain"
-            android:text="@string/play_again_button" />
+            android:text="Play Again" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

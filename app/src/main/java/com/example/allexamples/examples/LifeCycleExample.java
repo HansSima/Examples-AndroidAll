@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.allexamples.R;
 
-public class LifeCycleActivity extends AppCompatActivity {
+public class LifeCycleExample extends AppCompatActivity {
 
     final String TAG_LIFECYCLE = "lifecycle";
 

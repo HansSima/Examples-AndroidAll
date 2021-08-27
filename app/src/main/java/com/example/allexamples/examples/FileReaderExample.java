@@ -16,7 +16,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FileReader extends AppCompatActivity {
+public class FileReaderExample extends AppCompatActivity {
 
     private static final String FILE_NAME = "example.txt";
     EditText mEditText;
@@ -24,7 +24,7 @@ public class FileReader extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_file_save_load);
 
         mEditText = findViewById(R.id.editText);
     }

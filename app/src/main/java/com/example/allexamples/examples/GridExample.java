@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.allexamples.R;
 
-public class GridActivity extends AppCompatActivity {
+public class GridExample extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
