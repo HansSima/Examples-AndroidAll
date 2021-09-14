@@ -74,6 +74,12 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
         if(className.contains("App")){
             path = "com.example.allexamples.apps.";
+            if(className.contains("Memorable")){
+                path = path + "memorableplaces.";
+            }
+            if(className.contains("Notes")){
+                path = path + "notes.";
+            }
         }
 
         String classNameWithPath = path + className;

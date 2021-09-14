@@ -58,7 +58,7 @@ public class NotesApp extends AppCompatActivity implements ItemClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_notes);
 
         sharedPreferences = this.getSharedPreferences("com.example.notes", Context.MODE_PRIVATE);
         serActualNotes = sharedPreferences.getString("Notes", "");
