@@ -19,6 +19,7 @@
         <activity android:name=".apps.notes.NotesApp"></activity>
         <activity android:name=".apps.TicTacToeApp"></activity>
         <activity android:name=".apps.TimeTableApp"></activity>
+        <activity android:name=".apps.GuessCelebrityApp"></activity>
         <activity android:name=".examples.AlertDialogExample"></activity>
         <activity android:name=".examples.AnotherMapsExample"></activity>
         <activity android:name=".examples.AudioAndVideoExample"></activity>
