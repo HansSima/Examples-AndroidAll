@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         AllExamplesActivityArrayList.add("Notes App");
         AllExamplesActivityArrayList.add("Tic Tac Toe App");
         AllExamplesActivityArrayList.add("Time Table App");
+        AllExamplesActivityArrayList.add("Guess Celebrity App");
 
         //All examples
         AllExamplesActivityArrayList.add("Alert Dialog Example");
